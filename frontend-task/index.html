@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <!-- ============================================================
+       META & CHARACTER SET
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ============================================================
+       SEO META TAGS
+       ============================================================ -->
+  <title>NovaSaaS — The Modern Platform for Growing Teams</title>
+  <meta name="description"
+    content="NovaSaaS is the all-in-one SaaS platform that helps growing teams collaborate, automate, and scale. Start your free trial today." />
+  <meta name="keywords"
+    content="SaaS, productivity, collaboration, automation, modern platform, team management" />
+  <meta name="author" content="NovaSaaS" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- ============================================================
+       OPEN GRAPH (Social Sharing)
+       ============================================================ -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://novasaas.io/" />
+  <meta property="og:title"       content="NovaSaaS — The Modern Platform for Growing Teams" />
+  <meta property="og:description" content="All-in-one SaaS platform that helps growing teams collaborate, automate, and scale." />
+  <meta property="og:image"       content="images/og-image.png" />
+
+  <!-- ============================================================
+       TWITTER CARD
+       ============================================================ -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="NovaSaaS — The Modern Platform for Growing Teams" />
+  <meta name="twitter:description" content="All-in-one SaaS platform that helps growing teams collaborate, automate, and scale." />
+  <meta name="twitter:image"       content="images/og-image.png" />
+
+  <!-- ============================================================
+       FAVICON
+       ============================================================ -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="icon" type="image/png"     href="images/favicon.png" />
+  <link rel="apple-touch-icon"          href="images/apple-touch-icon.png" />
+
+  <!-- ============================================================
+       GOOGLE FONTS — Preloaded for performance
+       ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- ============================================================
+       STYLESHEETS
+       (style.css first → responsive.css overrides last)
+       ============================================================ -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       SKIP TO MAIN CONTENT — Accessibility
+       ============================================================ -->
+  <a class="sr-only" href="#main-content" id="skip-link"
+    style="position:absolute;top:-40px;left:0;background:var(--clr-primary);color:#fff;padding:8px 16px;border-radius:0 0 8px 0;z-index:9999;transition:top 0.3s;"
+    onfocus="this.style.top='0'"
+    onblur="this.style.top='-40px'">
+    Skip to main content
+  </a>
+
+  <!-- ============================================================
+       HEADER / NAVIGATION BAR
+       ============================================================ -->
+  <header role="banner">
+    <nav
+      id="navbar"
+      class="navbar"
+      role="navigation"
+      aria-label="Main navigation"
+    >
+      <div class="container navbar__inner">
+
+        <!-- ---- Logo ---- -->
+        <a href="#hero" class="navbar__logo" aria-label="NovaSaaS — Home">
+          <!-- Logo Mark (SVG icon) -->
+          <span class="logo-mark" aria-hidden="true">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <!-- Abstract "N" / orbit icon representing a SaaS platform -->
+              <path
+                d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 2.5a7.5 7.5 0 0 1 5.548 12.6L8 7.452A7.468 7.468 0 0 1 12 4.5zm0 15a7.5 7.5 0 0 1-5.548-12.6L16 16.548A7.468 7.468 0 0 1 12 19.5z"
+              />
+            </svg>
+          </span>
+          <!-- Logo Text -->
+          <span class="logo-text">NovaSaaS</span>
+        </a>
+
+        <!-- ---- Desktop Navigation Links ---- -->
+        <nav
+          class="navbar__nav"
+          aria-label="Site sections"
+        >
+          <ul role="list" class="flex" style="gap: 0.25rem; list-style: none; margin: 0; padding: 0;">
+            <li>
+              <a href="#hero"     class="nav__link active" id="nav-hero">Home</a>
+            </li>
+            <li>
+              <a href="#features" class="nav__link" id="nav-features">Features</a>
+            </li>
+            <li>
+              <a href="#pricing"  class="nav__link" id="nav-pricing">Pricing</a>
+            </li>
+            <li>
+              <a href="#blog"     class="nav__link" id="nav-blog">Blog</a>
+            </li>
+            <li>
+              <a href="#contact"  class="nav__link" id="nav-contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- ---- Desktop CTA Actions ---- -->
+        <div class="navbar__actions" aria-label="Account actions">
+          <a href="#contact" class="btn btn-ghost btn-sm" id="btn-login">
+            Log in
+          </a>
+          <a href="#pricing" class="btn btn-primary btn-sm" id="btn-get-started">
+            Get Started
+          </a>
+        </div>
+
+        <!-- ---- Hamburger Menu Button (Mobile) ---- -->
+        <button
+          id="hamburger"
+          class="hamburger"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+        >
+          <span class="hamburger__line" aria-hidden="true"></span>
+          <span class="hamburger__line" aria-hidden="true"></span>
+          <span class="hamburger__line" aria-hidden="true"></span>
+        </button>
+
+      </div><!-- /.navbar__inner -->
+    </nav>
+
+    <!-- ---- Mobile Navigation Drawer ---- -->
+    <nav
+      id="mobile-nav"
+      class="mobile-nav"
+      role="navigation"
+      aria-label="Mobile navigation"
+      aria-hidden="true"
+    >
+      <ul class="mobile-nav__list" role="list">
+        <li class="mobile-nav__item">
+          <a href="#hero"     class="mobile-nav__link" id="m-nav-hero">Home</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="#features" class="mobile-nav__link" id="m-nav-features">Features</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="#pricing"  class="mobile-nav__link" id="m-nav-pricing">Pricing</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="#blog"     class="mobile-nav__link" id="m-nav-blog">Blog</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="#contact"  class="mobile-nav__link" id="m-nav-contact">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Mobile CTA Buttons -->
+      <div class="mobile-nav__actions">
+        <a href="#contact" class="btn btn-outline" id="m-btn-login">Log in</a>
+        <a href="#pricing" class="btn btn-primary" id="m-btn-get-started">Get Started Free</a>
+      </div>
+    </nav>
+
+  </header>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main id="main-content" role="main">
+
+    <!-- ===================================================
+         HERO SECTION — Placeholder (Step 2)
+         =================================================== -->
+    <section
+      id="hero"
+      class="section"
+      aria-labelledby="hero-heading"
+    >
+      <div class="container">
+        <!-- Hero content will be added in Step 2 -->
+        <h1 id="hero-heading" class="sr-only">NovaSaaS — The Modern Platform for Growing Teams</h1>
+      </div>
+    </section>
+
+    <!-- ===================================================
+         FEATURES SECTION — Placeholder (Step 2)
+         =================================================== -->
+    <section
+      id="features"
+      class="section"
+      aria-labelledby="features-heading"
+    >
+      <div class="container">
+        <header class="section__header">
+          <!-- Features content will be added in Step 2 -->
+          <h2 id="features-heading" class="section__title sr-only">Features</h2>
+        </header>
+      </div>
+    </section>
+
+    <!-- ===================================================
+         PRICING SECTION — Placeholder (Step 3)
+         =================================================== -->
+    <section
+      id="pricing"
+      class="section"
+      aria-labelledby="pricing-heading"
+    >
+      <div class="container">
+        <header class="section__header">
+          <!-- Pricing content will be added in Step 3 -->
+          <h2 id="pricing-heading" class="section__title sr-only">Pricing</h2>
+        </header>
+      </div>
+    </section>
+
+    <!-- ===================================================
+         BLOG SECTION — Placeholder (Step 4)
+         =================================================== -->
+    <section
+      id="blog"
+      class="section"
+      aria-labelledby="blog-heading"
+    >
+      <div class="container">
+        <header class="section__header">
+          <!-- Blog content will be added in Step 4 -->
+          <h2 id="blog-heading" class="section__title sr-only">Blog</h2>
+        </header>
+      </div>
+    </section>
+
+    <!-- ===================================================
+         CONTACT SECTION — Placeholder (Step 3)
+         =================================================== -->
+    <section
+      id="contact"
+      class="section"
+      aria-labelledby="contact-heading"
+    >
+      <div class="container">
+        <header class="section__header">
+          <!-- Contact form will be added in Step 3 -->
+          <h2 id="contact-heading" class="section__title sr-only">Contact</h2>
+        </header>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER — Placeholder (Step 4)
+       ============================================================ -->
+  <footer
+    id="footer"
+    role="contentinfo"
+    aria-label="Site footer"
+  >
+    <div class="container">
+      <!-- Footer content will be added in Step 4 -->
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT — Deferred for performance
+       ============================================================ -->
+  <script src="js/app.js" defer></script>
+
+</body>
+</html>

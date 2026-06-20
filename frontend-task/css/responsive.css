@@ -1,0 +1,211 @@
+/* ============================================================
+   responsive.css — Responsive Styles
+   O2H Mock Front-End Developer Assessment
+   Description: Mobile-first media queries for all breakpoints
+   ============================================================ */
+
+/* ============================================================
+   BREAKPOINT REFERENCE
+   ------------------------------------------
+   xs   — 0px       (mobile portrait)
+   sm   — 480px     (mobile landscape)
+   md   — 768px     (tablet)
+   lg   — 1024px    (laptop)
+   xl   — 1280px    (desktop)
+   2xl  — 1536px    (large desktop)
+   ============================================================ */
+
+/* ============================================================
+   BASE (Mobile-First — styles for xs / 0px+)
+   Everything in style.css is already mobile-first.
+   The rules below PROGRESSIVELY ENHANCE for larger screens.
+   ============================================================ */
+
+/* ============================================================
+   MOBILE — 0px to 767px  (xs / sm)
+   ============================================================ */
+
+/* Navigation — show hamburger, hide desktop nav */
+@media (max-width: 767px) {
+  :root {
+    --nav-height: 64px;
+  }
+
+  /* Hide desktop nav & actions */
+  .navbar__nav,
+  .navbar__actions {
+    display: none;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Show mobile nav drawer */
+  .mobile-nav {
+    display: block;
+  }
+
+  /* Logo text size adjustment */
+  .logo-text {
+    font-size: 1.25rem;
+  }
+
+  /* Section spacing tightened on small screens */
+  .section {
+    padding-block: 4rem;
+  }
+
+  .section__title {
+    font-size: 1.75rem;
+  }
+
+  .section__subtitle {
+    font-size: 1rem;
+  }
+
+  /* Hero placeholder min-height adjustment */
+  #hero {
+    min-height: 100svh;
+  }
+
+  /* Button full-width on mobile inside mobile nav */
+  .mobile-nav__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ============================================================
+   SMALL MOBILE — 0px to 479px (xs only)
+   ============================================================ */
+@media (max-width: 479px) {
+  :root {
+    --nav-height: 60px;
+  }
+
+  .container {
+    padding-inline: 1rem;
+  }
+
+  .logo-mark {
+    width: 34px;
+    height: 34px;
+  }
+
+  .logo-mark svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .section__title {
+    font-size: 1.5rem;
+  }
+
+  .section__header {
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* ============================================================
+   TABLET — 768px to 1023px (md)
+   ============================================================ */
+@media (min-width: 768px) {
+  /* Hide hamburger & mobile nav on tablet+ */
+  .hamburger {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: none !important; /* Override JS open state */
+  }
+
+  /* Show desktop nav */
+  .navbar__nav,
+  .navbar__actions {
+    display: flex;
+  }
+
+  /* Section spacing */
+  .section {
+    padding-block: 5rem;
+  }
+
+  .section__title {
+    font-size: 2.25rem;
+  }
+}
+
+/* ============================================================
+   LAPTOP — 1024px to 1279px (lg)
+   ============================================================ */
+@media (min-width: 1024px) {
+  .section {
+    padding-block: 6rem;
+  }
+
+  .section__title {
+    font-size: 2.5rem;
+  }
+
+  .nav__link {
+    font-size: 0.9375rem;
+  }
+}
+
+/* ============================================================
+   DESKTOP — 1280px+ (xl)
+   ============================================================ */
+@media (min-width: 1280px) {
+  .container {
+    padding-inline: 2rem;
+  }
+
+  .section {
+    padding-block: 6rem;
+  }
+
+  .section__title {
+    font-size: 2.5rem;
+  }
+}
+
+/* ============================================================
+   LARGE DESKTOP — 1536px+ (2xl)
+   ============================================================ */
+@media (min-width: 1536px) {
+  :root {
+    --container-xl: 1400px;
+  }
+}
+
+/* ============================================================
+   ACCESSIBILITY — Reduced Motion
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================
+   PRINT STYLES
+   ============================================================ */
+@media print {
+  .navbar,
+  .hamburger,
+  .mobile-nav {
+    display: none !important;
+  }
+
+  body {
+    color: #000;
+    background: #fff;
+  }
+}
