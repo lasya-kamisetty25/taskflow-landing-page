@@ -31,9 +31,8 @@
     --nav-height: 64px;
   }
 
-  /* Hide desktop nav & actions */
-  .navbar__nav,
-  .navbar__actions {
+  /* Hide desktop nav */
+  .navbar__nav {
     display: none;
   }
 
@@ -57,6 +56,36 @@
     padding-block: 4rem;
   }
 
+  /* ---- HERO — single column stacked layout ---- */
+  .hero__container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding-block: 3rem 4rem;
+    text-align: center;
+  }
+
+  .hero__content {
+    align-items: center;
+    order: 1;
+  }
+
+  .hero__subheading {
+    max-width: 100%;
+  }
+
+  .hero__cta-group {
+    justify-content: center;
+  }
+
+  .hero__media {
+    order: 2;
+    width: 100%;
+  }
+
+  .hero__image {
+    max-width: 100%;
+  }
+
   .section__title {
     font-size: 1.75rem;
   }
@@ -70,11 +99,7 @@
     min-height: 100svh;
   }
 
-  /* Button full-width on mobile inside mobile nav */
-  .mobile-nav__actions .btn {
-    width: 100%;
-    justify-content: center;
-  }
+
 }
 
 /* ============================================================
@@ -106,6 +131,24 @@
   .section__header {
     margin-bottom: 2.5rem;
   }
+
+  /* ---- HERO — extra-small adjustments ---- */
+  .hero__heading {
+    font-size: 2rem;
+  }
+
+  .hero__cta-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero__cta-primary,
+  .hero__cta-secondary {
+    justify-content: center;
+    padding: 0.875rem 1.5rem;
+  }
+
+
 }
 
 /* ============================================================
@@ -132,6 +175,34 @@
     padding-block: 5rem;
   }
 
+  /* ---- HERO — tablet: two-column layout restored ---- */
+  .hero__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    padding-block: 4rem 5rem;
+    text-align: left;
+  }
+
+  .hero__content {
+    align-items: flex-start;
+    order: unset;
+  }
+
+
+
+  .hero__cta-group {
+    justify-content: flex-start;
+  }
+
+
+
+  .hero__media {
+    order: unset;
+    width: auto;
+  }
+
+
+
   .section__title {
     font-size: 2.25rem;
   }
@@ -151,6 +222,12 @@
 
   .nav__link {
     font-size: 0.9375rem;
+  }
+
+  /* ---- HERO — laptop: wider gap, larger image ---- */
+  .hero__container {
+    gap: 4rem;
+    padding-block: 5rem 6rem;
   }
 }
 

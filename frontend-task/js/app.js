@@ -202,17 +202,56 @@ const Navigation = (() => {
    (Will be fully implemented in subsequent steps)
    ============================================================ */
 
+/* ============================================================
+   MODULE: HERO SECTION — Step 2
+   ============================================================ */
+
 /**
- * DarkMode module — Step 4
- * Placeholder for dark/light theme toggle.
+ * HeroSection module
+ * Simplifies hero interactions for clean student-project design.
  */
-const DarkMode = (() => {
+const HeroSection = (() => {
   const init = () => {
-    // TODO: Implement in Step 4
-    // - Read system preference (prefers-color-scheme)
-    // - Toggle [data-theme="dark"] on <html>
-    // - Persist preference to localStorage
+    // No parallax or floating card animations required
   };
+
+  return { init };
+})();
+
+
+const DarkMode = (() => {
+  const themeToggleBtn = $('#theme-toggle');
+
+  const getPreferredTheme = () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      return savedTheme;
+    }
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  };
+
+  const setTheme = (theme) => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  };
+
+  const toggleTheme = () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+  };
+
+  const init = () => {
+    if (!themeToggleBtn) return;
+
+    // Apply preferred theme on startup
+    const initialTheme = getPreferredTheme();
+    setTheme(initialTheme);
+
+    // Event listener for toggle button click
+    themeToggleBtn.addEventListener('click', toggleTheme);
+  };
+
   return { init };
 })();
 
@@ -262,6 +301,9 @@ const PricingToggle = (() => {
 document.addEventListener('DOMContentLoaded', () => {
   // Step 1
   Navigation.init();
+
+  // Step 2
+  HeroSection.init();
 
   // Placeholders — initialise when features are built
   DarkMode.init();
